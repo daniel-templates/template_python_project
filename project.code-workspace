@@ -1,7 +1,7 @@
 {
 
+	// Folders included in this workspace.
 	"folders": [
-		// Folders included in this workspace.
 		
 		// Project folder:
 		{	
@@ -19,8 +19,8 @@
   		}
 	],
 
+	// Settings applied to all folders in this workspace.
 	"settings": {
-		// Settings applied to all folders in this workspace.
 
 		// Read-only files:
 		"files.readonlyInclude": {
@@ -79,25 +79,26 @@
 			"files.eol": "\r\n"
 		},
 
-		// Terminal configuration on Linux and Windows
+		// Linux Terminals
 		"terminal.integrated.profiles.linux": {
 			"bash": {
 				"path": "bash",
+				"args": [],
 				"icon": "terminal-bash"
-			},
-			"python": {
-				"path": "python3",
-				"args": []
 			}
 		},
 		"terminal.integrated.env.linux": {
-			//"PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}/src"
+			// "ENVIRONMENT_VARIABLE": "value"
+			// "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}/src"
 		},
+		"terminal.integrated.defaultProfile.linux": "bash",
 
+		// Windows Terminals
 		"terminal.integrated.profiles.windows": {
 			"PowerShell": {
 				"source": "PowerShell",
-				"icon": "terminal-powershell"
+				"icon": "terminal-powershell",
+				"args": []
 			},
 			"Command Prompt": {
 				"path": [
@@ -113,18 +114,12 @@
 			"WSL (Default Distro)": {
 				"path": "C:\\Windows\\System32\\wsl.exe",
 				"args": []
-			},
-			"Python": {
-				"path": "python.exe",
-				"args": []
 			}
 		},
 		"terminal.integrated.env.windows": {
-			//"PYTHONPATH": "${env:PYTHONPATH};${workspaceFolder}\\src"
+			// "ENVIRONMENT_VARIABLE": "value"
+			// "PYTHONPATH": "${env:PYTHONPATH};${workspaceFolder}\\src"
 		},
-
-		// Default terminals
-		"terminal.integrated.defaultProfile.windows": "PowerShell",
-		"terminal.integrated.defaultProfile.linux": "bash",
+		"terminal.integrated.defaultProfile.windows": "PowerShell"
 	}
 }
