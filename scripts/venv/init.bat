@@ -7,10 +7,42 @@ for /F "delims=" %%i in ("%working_dir%") do set "project_name=%%~ni"
 set "venv_dir=.venv.windows"
 set "scripts_dir=%venv_dir%\Scripts"
 set "venv_prompt=Python VENV: %project_name%"
-set "venv_opts="
-:: set "venv_opts=--clear --system-site-packages"
+set "venv_opts=--upgrade-deps"
 set "pip_opts="
 :: set "pip_opts=--config-settings editable_mode=strict"
+
+goto ARGPARSE
+
+
+:: Usage
+:Usage
+echo.
+echo Usage:
+echo   scripts\venv\init.bat [options]
+echo.
+echo    -h --help /?            Show this info.
+echo    --clear                 Reset the venv before reinstalling.
+echo    --upgrade               Upgrade the existing venv to use this Python version.
+echo    --system-site-packages  Give the venv access to the system site-packages.
+echo.
+exit /b 0
+
+
+
+:: Args
+:ARGPARSE
+if /I "%1" == "-h" goto :Usage
+if /I "%1" == "--help" goto :Usage
+if /I "%1" == "/?" goto :Usage
+if /I "%1" == "--clear" set "venv_opts=%venv_opts% %1"
+if /I "%1" == "--upgrade" set "venv_opts=%venv_opts% %1"
+if /I "%1" == "--system-site-packages" set "venv_opts=%venv_opts% %1"
+shift
+if not "%1" == "" goto :ARGPARSE
+
+
+
+
 
 :: Checks
 if not exist "%working_dir%\.git" (
@@ -29,6 +61,8 @@ if not exist "%working_dir%\setup.py" (
 ::     exit $?
 :: fi
 
+
+
 :: Start
 echo.
 echo Initializing Python Virtual Environment (Windows)...
@@ -44,7 +78,7 @@ echo.
 echo Installing missing local packages...
 
 call %scripts_dir%\activate.bat
-python -m pip install --editable . %pip_opts%
+python -m pip install %pip_opts% --editable .
 
 if %ERRORLEVEL% neq 0 (
     echo ERROR: Failed to install one or more packages.
@@ -69,5 +103,7 @@ echo  *  Powershell:
 echo       Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force ; %scripts_dir%\Activate.ps1
 echo.
 
+
+:: End
 endlocal
 exit /b 0

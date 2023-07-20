@@ -7,10 +7,42 @@ project_name="$(basename "$working_dir")"
 venv_dir=".venv.linux"
 scripts_dir="$venv_dir/bin"
 venv_prompt="Python VENV: $project_name"
-venv_opts=""
-#venv_opts="--clear --system-site-packages"
+venv_opts="--upgrade-deps"
 pip_opts=""
 #pip_opts="--config-settings editable_mode=strict"
+
+
+
+
+# Usage
+function Usage {
+    echo ""
+    echo "Usage:"
+    echo "  scripts/venv/init.bat [options]"
+    echo ""
+    echo "   -h --help /?            Show this info."
+    echo "   --clear                 Reset the venv before reinstalling."
+    echo "   --upgrade               Upgrade the existing venv to use this Python version."
+    echo "   --system-site-packages  Give the venv access to the system site-packages."
+    echo ""
+    exit 0
+}
+
+
+# Args
+while [[ "$1" != "" ]]; do
+    case $1 in
+      -h)        Usage ;;
+      --help)    Usage ;;
+      /?)        Usage ;;
+      --clear)   venv_opts="$venv_opts $1" ;;
+      --upgrade) venv_opts="$venv_opts $1" ;;
+      --system-site-packages) venv_opts="$venv_opts $1" ;;
+      *)         Usage ;;
+    esac
+    shift
+done
+
 
 # Checks
 if [[ ! -d "$working_dir/.git" ]]; then
@@ -28,6 +60,8 @@ if [[ "$OS" =~ "Windows" ]]; then   # Git Bash, not Linux.
     "$batfile"      # Run the same-named .bat file
     exit $?
 fi
+
+
 
 # Start
 echo ""
@@ -69,5 +103,7 @@ echo "     source $scripts_dir/activate"
 # echo       Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force ; %scripts_dir%\Activate.ps1
 echo ""
 
+
+# End
 
 exit 0

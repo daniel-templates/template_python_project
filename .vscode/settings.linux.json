@@ -1,3 +1,4 @@
 {
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv.linux/bin/python",
     "python.envFile": "${workspaceFolder}/.vscode/pythonenv.linux.env"
 }
