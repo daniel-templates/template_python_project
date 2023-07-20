@@ -5,6 +5,8 @@
         "foxundermoon.shell-format",
         "franmastromarino.vs-code-settings-os",
         "mutantdino.resourcemonitor",
-        "ms-vscode-remote.vscode-remote-extensionpack"
+        "ms-vscode-remote.vscode-remote-extensionpack",
+        "kevinrose.vsc-python-indent",
+        "njpwerner.autodocstring"
     ]
 }

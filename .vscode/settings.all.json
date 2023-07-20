@@ -1,5 +1,7 @@
 {
     "git.branchProtection": [
         "main"
-    ]
+    ],
+    "python.testing.cwd": "${workspaceFolder}",
+    "python.testing.unittestEnabled": true
 }
