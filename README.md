@@ -10,7 +10,7 @@ REPO:   template_python_project
 -->
 
 
-# [![GitHub Organization][icon_daniel-templates]][home_daniel-templates]  template_python_project
+# [![daniel-templates][icon_daniel-templates]][home_daniel-templates]  template_python_project
 
 <!-- TODO: Edit description. -->
 ##### A base template for Python projects. Other project templates can be found at [daniel-templates][home_daniel-templates].
