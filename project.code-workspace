@@ -29,6 +29,7 @@
 			"/mnt/p/_Reference/**": true,
 			// Build output
 			"**/build/**": true,
+			"**/.venv*/**": true,
 			// License
 			"**/LICENSE.txt": true,
 			// Git may break if any of these are modified:
@@ -47,6 +48,7 @@
 			"/mnt/p/_Reference/**": true,
 			// Build output
 			"**/build/**": true,
+			"**/.venv*/**": true,
 			// License
 			"**/LICENSE.txt": true,
 			// Git may break if any of these are modified:
@@ -64,7 +66,8 @@
 			"P:/_Reference/**": true,
 			"/mnt/p/_Reference/**": true,
 			// Build output
-			"**/build/**": true
+			"**/build/**": true,
+			"**/.venv*/**": true,
 		},
 
 		// Use unix-style line endings (\n) for all text files except Windows-specific filetypes.
@@ -81,11 +84,16 @@
 
 		// Linux Terminals
 		"terminal.integrated.profiles.linux": {
-			"bash": {
+			"Bash": {
 				"path": "bash",
 				"args": [],
 				"icon": "terminal-bash"
-			}
+			},
+			"Python": {
+				"path": "python",
+				"args": [],
+				"icon": "symbol-package"
+			},
 		},
 		"terminal.integrated.env.linux": {
 			// "ENVIRONMENT_VARIABLE": "value"
@@ -114,12 +122,17 @@
 			"WSL (Default Distro)": {
 				"path": "C:\\Windows\\System32\\wsl.exe",
 				"args": []
-			}
+			},
+			"Python": {
+				"path": "python",
+				"args": [],
+				"icon": "symbol-package"
+			},
 		},
 		"terminal.integrated.env.windows": {
 			// "ENVIRONMENT_VARIABLE": "value"
 			// "PYTHONPATH": "${env:PYTHONPATH};${workspaceFolder}\\src"
 		},
-		"terminal.integrated.defaultProfile.windows": "PowerShell"
+		"terminal.integrated.defaultProfile.windows": "PowerShell",
 	}
 }

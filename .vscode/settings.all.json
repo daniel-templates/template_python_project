@@ -2,6 +2,8 @@
     "git.branchProtection": [
         "main"
     ],
+    "python.terminal.activateEnvironment": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
     "python.testing.cwd": "${workspaceFolder}",
     "python.testing.unittestEnabled": true
 }

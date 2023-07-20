@@ -37,6 +37,11 @@ REPO:   template_python_project
 - Ubuntu 20.04 (tested)
 - Bash 5.0 or later
 
+#### Python:
+- Python 3.9 or later
+- pip
+- python3-venv
+
 <br/>
 -->
 
