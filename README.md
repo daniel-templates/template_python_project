@@ -34,11 +34,11 @@ REPO:   template_python_project
 - Git ([from here](https://git-scm.com/download/win), or similar)
 
 #### Linux:
-- Ubuntu 20.04 (tested)
+- Ubuntu 20.04
 - Bash 5.0 or later
 
 #### Python:
-- Python 3.9 or later
+- Python 3.10 or later
 - pip
 - python3-venv
 

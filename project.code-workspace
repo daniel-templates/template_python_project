@@ -79,10 +79,14 @@
 				"args": [],
 				"overrideName": true,
 				"icon": "terminal-bash"
+			},
 			"Python (VENV)": {
 				"path": "bash",
+    			"args": [
+    				"-c",
+    				"read -p 'Python VENV: ' -r venv ; $venv ; echo '' ; ${workspaceFolder}/.venv.linux/bin/python "
+    			],
 				"overrideName": true,
-				"args": [],
 				"icon": "symbol-package"
 			},
 		},
