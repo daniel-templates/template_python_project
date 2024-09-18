@@ -1,10 +1,10 @@
 @echo off
-setlocal
+setlocal DisableDelayedExpansion
 
 for %%Q in ("%~dp0\.") do set "parent_dir=%%~fQ"
 set "working_dir=%CD%"
 for /F "delims=" %%i in ("%working_dir%") do set "project_name=%%~ni"
-set "scripts_dir=scripts"
+set "scripts_dir=%parent_dir%"
 
 
 :: Checks
@@ -38,11 +38,8 @@ if %ERRORLEVEL% neq 0 (
 
 :: echo ""
 :: echo "Making scripts executable..."
-:: 
+::
 :: chmod --recursive --verbose +x "$scripts_dir"
-
-echo.
-echo Complete.
 
 
 :: End

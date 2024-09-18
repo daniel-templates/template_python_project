@@ -2,6 +2,35 @@
     "git.branchProtection": [
         "main"
     ],
+    "git.openRepositoryInParentFolders": "always",
+    "git.autofetch": "all",
+
+
+    "files.eol": "\n",
+    "[bat]": {
+        "files.eol": "\r\n"
+    },
+    "[cmd]": {
+        "files.eol": "\r\n"
+    },
+    "[inf]": {
+        "files.eol": "\r\n"
+    },
+
+
+    "[makefile]": {
+        "editor.detectIndentation": false,
+        "editor.renderWhitespace": "boundary",
+        "editor.insertSpaces": false
+    },
+
+
+    "shellcheck.exclude": [
+        "2181"
+    ],
+    "shellcheck.useWorkspaceRootAsCwd": true,
+    
+        
     "python.terminal.activateEnvironment": true,
     "python.terminal.activateEnvInCurrentTerminal": true,
     "python.testing.cwd": "${workspaceFolder}",

@@ -4,7 +4,7 @@
 parent_dir="$(dirname "$(readlink -f "$0")")"
 working_dir="$PWD"
 project_name="$(basename "$working_dir")"
-scripts_dir="scripts"
+scripts_dir="$parent_dir"
 
 
 # Checks
@@ -32,17 +32,14 @@ echo "Installing .gitconfig..."
 git config --local include.path ../.gitconfig
 
 if [[ $? != 0 ]]; then
-    echo ERROR: Could not install .gitconfig. Failed to modify local include.path.
+    echo "ERROR: Could not install .gitconfig. Failed to modify local include.path."
     exit 1
 fi
 
 echo ""
 echo "Making scripts executable..."
 
-chmod --recursive --verbose +x "$scripts_dir"
-
-echo ""
-echo "Complete."
+chmod --recursive --verbose u+x "$scripts_dir"
 
 
 # End
