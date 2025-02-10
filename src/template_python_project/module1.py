@@ -1,4 +1,4 @@
-# module1.py 
+# module1.py
 # Example module containing a class definition.
 
 from .module2 import *
@@ -13,3 +13,12 @@ class ClassModule1:
             subpkg1.fcn_submodule1(),
             subpkg2.fcn_submodule2()
         ]
+
+
+def hello_world():
+    myobj = ClassModule1()
+    print(vars(myobj))
+
+
+if __name__ == '__main__':
+    hello_world()
