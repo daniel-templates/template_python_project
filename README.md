@@ -77,6 +77,29 @@ and a remote for each parent template:
     chmod --recursive --verbose +x "./.mgmt"
 ```
 
+### Initializing the Python Virtual Environment
+The Python VENV is non-portable and platform-specific, so a multi-platform project needs multiple VENVs.
+
+1. Run one of the following helper scripts:
+```
+    .mgmt\venv\init.bat     (on Windows; creates directory ".venv.windows/" )
+    .mgmt/venv/init.sh      (on Linux;   creates directory ".venv.linux/" )
+```
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Or set up manually (run from project root):
+```
+    python -m venv ".venv_dir" [--clear] --prompt="venv name"
+    (activate venv, see below)
+    pip install --editable .
+```
+2. Activate the appropriate VENV to test it out:
+```
+    .venv.windows\Scripts\activate.bat      (Windows+CMD)
+    source .venv.windows/Scripts/activate   (Windows+Git-Bash)
+    Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force ; .venv.windows\Scripts\Activate.ps1  (Windows+Powershell)
+    source .venv.linux/bin/activate         (Linux)
+```
+3. Restart VSCode. The VENV should be detected by the Python extension, and activated automatically for each new terminal.
+
 
 <!-- OPTIONAL: Add download and installation instructions -->
 <!--
