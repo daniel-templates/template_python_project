@@ -58,10 +58,8 @@ build/*
 Thumbs.db
 
 #-------------------------------------------------------------------------------
-#  UPSTREAM: (this project)
+#  UPSTREAM: daniel-templates/template_python_project
 #-------------------------------------------------------------------------------
-
-#### SECTION: TEMPLATE_PYTHON_PROJECT ####
 
 # VSCode Python Environment Variables
 !.vscode/*.env
@@ -72,11 +70,8 @@ __pycache__/
 *$py.class
 
 # Virtual Environments
-env/
 .env/
-venv*/
 .venv*/
-!scripts/venv
 
 # Distribution / packaging
 .Python
@@ -115,4 +110,7 @@ coverage.xml
 .pytest_cache/
 cover/
 
-####
+#-------------------------------------------------------------------------------
+#  UPSTREAM: (this project)
+#-------------------------------------------------------------------------------
+

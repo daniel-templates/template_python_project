@@ -82,8 +82,8 @@ The Python VENV is non-portable and platform-specific, so a multi-platform proje
 
 1. Run one of the following helper scripts:
 ```
-    .mgmt\venv\init.bat     (on Windows; creates directory ".venv.windows/" )
-    .mgmt/venv/init.sh      (on Linux;   creates directory ".venv.linux/" )
+    .project\venv\init.bat     (on Windows; creates directory ".venv.windows\" )
+    .project/venv/init.sh      (on Linux;   creates directory ".venv.linux/" )
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Or set up manually (run from project root):
 ```

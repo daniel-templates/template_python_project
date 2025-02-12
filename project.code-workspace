@@ -60,6 +60,14 @@
 			"**/.vscode/settings.json": true,
 
 			//------------------------------------------------------------------
+			//  UPSTREAM: daniel-templates/template_python_project
+			//------------------------------------------------------------------
+
+			// Python Virtual Environments
+			"**/.venv*/**": true,
+			"**/.project/venv/**": true,
+
+			//------------------------------------------------------------------
 			//  UPSTREAM: (this project)
 			//------------------------------------------------------------------
 
@@ -69,7 +77,6 @@
 
 			// Specific filetypes
 			// "**/*.pdf": true,
-			"**/.venv*/**": true,
 
 		},
 
@@ -93,7 +100,14 @@
 
 			// Build output
 			"**/build/**": true,
+
+			//------------------------------------------------------------------
+			//  UPSTREAM: daniel-templates/template_python_project
+			//------------------------------------------------------------------
+
+			// Python Virtual Environments
 			"**/.venv*/**": true,
+			"**/.project/venv/**": true,
 
 			//------------------------------------------------------------------
 			//  UPSTREAM: (this project)
@@ -121,6 +135,14 @@
 			"**/build/**": true,
 
 			//------------------------------------------------------------------
+			//  UPSTREAM: daniel-templates/template_python_project
+			//------------------------------------------------------------------
+
+			// Python Virtual Environments
+			"**/.venv*/**": true,
+			"**/.project/venv/**": true,
+
+			//------------------------------------------------------------------
 			//  UPSTREAM: (this project)
 			//------------------------------------------------------------------
 
@@ -128,7 +150,6 @@
 			// "P:/Reference/**": true,
 			// "/mnt/p/Reference/**": true,
 
-			"**/.venv*/**": true,
 		},
 
 		//======================================================================
@@ -146,6 +167,11 @@
 				"overrideName": true,
 				"icon": "terminal-bash"
 			},
+
+			//------------------------------------------------------------------
+			//  UPSTREAM: daniel-templates/template_python_project
+			//------------------------------------------------------------------
+
 			"Python (VENV)": {
 				"path": "bash",
     			"args": [
@@ -202,6 +228,11 @@
 				"overrideName": true,
 				"icon": "terminal-bash"
 			},
+
+			//------------------------------------------------------------------
+			//  UPSTREAM: daniel-templates/template_python_project
+			//------------------------------------------------------------------
+
 			"Python (VENV)": {
 				"source": "PowerShell",
 				"overrideName": true,

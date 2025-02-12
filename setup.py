@@ -25,6 +25,8 @@ from setuptools import setup, find_packages
 ROOT_DIR=os.path.dirname(os.path.abspath(__file__))
 PACKAGE_NAME=os.path.basename(ROOT_DIR)
 PACKAGE_DIR="src"
+LOG_DIR="logs"
+LOG_PATH=os.path.join(ROOT_DIR, LOG_DIR, "setup.py.log")
 VERSION_PATH = os.path.join(PACKAGE_DIR, PACKAGE_NAME, "version.py")
 REQUIREMENTS_PATH=os.path.join(ROOT_DIR, 'requirements.txt')
 LONG_DESCRIPTION_PATH=os.path.join(ROOT_DIR, 'README.md')
@@ -62,6 +64,9 @@ try:
 except FileNotFoundError:
     REQUIRES = []
 
+REQUIRES=[
+]
+
 
 # Set LONG_DESCRIPTION from README.md
 try:
@@ -74,6 +79,9 @@ except FileNotFoundError:
 # Set __version__ string by executing version.py
 exec(compile(open(VERSION_PATH).read(), VERSION_PATH, "exec"))
 
+
+with open(LOG_PATH, "w") as f:
+    f.writelines(REQUIRES)
 
 # Begin setup
 setup(

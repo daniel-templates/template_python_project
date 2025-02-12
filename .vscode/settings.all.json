@@ -35,9 +35,9 @@
 	"makefile.configurations": [
 
 	],
-    "makefile.defaultLaunchConfiguration": null
-    
-        
+    "makefile.defaultLaunchConfiguration": null,
+
+
     "python.terminal.activateEnvironment": true,
     "python.terminal.activateEnvInCurrentTerminal": true,
     "python.testing.cwd": "${workspaceFolder}",
