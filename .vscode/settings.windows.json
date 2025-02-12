@@ -1,4 +1,8 @@
 {
+    "makefile.makePath": "make",
+    "makefile.makefilePath": "${workspaceFolder}\\Makefile",
+    "makefile.extensionOutputFolder": "${workspaceFolder}\\logs\\vscode_makefile_extension",
+    "makefile.extensionLog": "${workspaceFolder}\\logs\\vscode_makefile_extension.log"
     "python.defaultInterpreterPath": "${workspaceFolder}\\.venv.windows\\Scripts\\python.exe",
     "python.envFile": "${workspaceFolder}\\.vscode\\pythonenv.windows.env"
 }

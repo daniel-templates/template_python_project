@@ -29,7 +29,7 @@ fi
 echo ""
 echo "Installing .gitconfig..."
 
-git config --local include.path ../.gitconfig
+git config --local include.path ../.project/git/.gitconfig
 
 if [[ $? != 0 ]]; then
     echo "ERROR: Could not install .gitconfig. Failed to modify local include.path."
@@ -39,7 +39,7 @@ fi
 echo ""
 echo "Making scripts executable..."
 
-chmod --recursive --verbose u+x "$scripts_dir"
+chmod --recursive --verbose u+x,g+x "$scripts_dir"
 
 
 # End

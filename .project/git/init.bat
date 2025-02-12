@@ -29,7 +29,7 @@ if not exist "%working_dir%\.gitconfig" (
 echo.
 echo Installing .gitconfig...
 
-git config --local include.path ../.gitconfig
+git config --local include.path ../.project/git/.gitconfig
 
 if %ERRORLEVEL% neq 0 (
     echo ERROR: Could not install .gitconfig. Failed to modify local include.path
@@ -39,7 +39,7 @@ if %ERRORLEVEL% neq 0 (
 :: echo ""
 :: echo "Making scripts executable..."
 ::
-:: chmod --recursive --verbose +x "$scripts_dir"
+:: chmod --recursive --verbose u+x,g+x "$scripts_dir"
 
 
 :: End

@@ -16,8 +16,9 @@
     "[inf]": {
         "files.eol": "\r\n"
     },
-
-
+    "[reg]": {
+        "files.eol": "\r\n"
+    },
     "[makefile]": {
         "editor.detectIndentation": false,
         "editor.renderWhitespace": "boundary",
@@ -29,6 +30,12 @@
         "2181"
     ],
     "shellcheck.useWorkspaceRootAsCwd": true,
+
+
+	"makefile.configurations": [
+
+	],
+    "makefile.defaultLaunchConfiguration": null
     
         
     "python.terminal.activateEnvironment": true,
